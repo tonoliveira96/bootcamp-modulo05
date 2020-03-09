@@ -55,7 +55,7 @@ export default class Repository extends Component {
     return (
       <Container>
         <Link to="/">
-          <FaArrowLeft color="#000" size="20" />
+          <FaArrowLeft color="#000" size="24" />
         </Link>
         <Owner>
           <img src={repository.owner.avatar_url} alt={repository.owner.login} />
