@@ -71,5 +71,17 @@ export const List = styled.ul`
   a {
     color: #7159c1;
     text-decoration: none;
+    margin-left: auto;
+    margin-right: 25px;
+  }
+
+  svg {
+    color: #ff6347;
+    font-size: 18px;
+    padding: 1px;
+    margin-left: 0;
+  }
+  svg:hover {
+    color: #ff0000;
   }
 `;

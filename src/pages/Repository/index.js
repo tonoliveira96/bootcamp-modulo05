@@ -109,7 +109,7 @@ export default class Repository extends Component {
         </Owner>
 
         <IssueList>
-          <IssueFilter actiove={filterIndex}>
+          <IssueFilter active={filterIndex}>
             {filters.map((filter, index) => (
               <button
                 type="button"
