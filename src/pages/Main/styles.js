@@ -74,12 +74,20 @@ export const List = styled.ul`
     margin-left: auto;
     margin-right: 25px;
   }
+`;
+
+export const DeleteButton = styled.button.attrs(props => ({
+  type: 'button',
+  disabled: props.loading,
+}))`
+  background: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
 
   svg {
     color: #ff6347;
     font-size: 18px;
-    padding: 1px;
-    margin-left: 0;
   }
   svg:hover {
     color: #ff0000;

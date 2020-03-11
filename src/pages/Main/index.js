@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import Container from '../../components/Container';
-import { Form, SubmitButton, List } from './styles';
+import { Form, SubmitButton, List, DeleteButton } from './styles';
 
 // import { Container } from './styles';
 
@@ -15,6 +15,7 @@ export default class Main extends Component {
     repositories: [],
     loading: false,
     error: null,
+    indice: 0,
   };
 
   // carregar os dados do localStorage
@@ -69,8 +70,12 @@ export default class Main extends Component {
     }
   };
 
+  handleDelete = e => {
+    console.log(e.target.value);
+  };
+
   render() {
-    const { newRepo, repositories, loading, error } = this.state;
+    const { newRepo, repositories, loading, error, indice } = this.state;
 
     return (
       <Container>
@@ -102,7 +107,9 @@ export default class Main extends Component {
               <Link to={`/repository/${encodeURIComponent(repository.name)}`}>
                 Detalhes
               </Link>
-              <FaTrash />
+              {/* <DeleteButton onClick={this.handleDelete}>
+                <FaTrash />
+              </DeleteButton> */}
             </li>
           ))}
         </List>
